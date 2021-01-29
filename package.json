@@ -1,0 +1,20 @@
+{
+  "name": "haobin-encyclopedia",
+  "version": "1.0.0",
+  "description": "An api that collects fun facts of Hao Bin",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EuJin03/haobin-encyclopedia.git"
+  },
+  "author": "EuJin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EuJin03/haobin-encyclopedia/issues"
+  },
+  "homepage": "https://github.com/EuJin03/haobin-encyclopedia#readme"
+}
