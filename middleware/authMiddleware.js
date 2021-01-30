@@ -1,5 +1,5 @@
 const admin = (req, res, next) => {
-  if (req.body.token === "eujinhensem") {
+  if (req.body.token === process.env.ADMIN_TOKEN) {
     next();
   } else {
     res.status(401);
