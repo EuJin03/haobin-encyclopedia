@@ -17,7 +17,6 @@ if (process.env.NODE_ENV === "development") {
 }
 
 app.use(express.json());
-app.use(express.methodOverride());
 app.use(allowCrossDomain);
 app.use("/api/facts", factRoutes);
 
