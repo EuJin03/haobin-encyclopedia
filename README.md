@@ -17,7 +17,7 @@ fetch("https://haobin.herokuapp.com/api/facts")
 To GET single Hao Bin facts
 
 ```javascript
-fetch("https://haobin.herokuapp.com/api/facts/1")
+fetch("https://haobin.herokuapp.com/api/facts/:phrase")
   .then(response => response.json())
   .then(json => console.log(json));
 ```
