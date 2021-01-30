@@ -4,6 +4,7 @@ import express from "express";
 import colors from "colors";
 import morgan from "morgan";
 import connectDB from "./config/db.js";
+import allowCrossDomain from "./middleware/corsMiddleware.js";
 
 import factRoutes from "./routes/factRoutes.js";
 
@@ -16,7 +17,8 @@ if (process.env.NODE_ENV === "development") {
 }
 
 app.use(express.json());
-
+app.use(express.methodOverride());
+app.use(allowCrossDomain);
 app.use("/api/facts", factRoutes);
 
 const __dirname = path.resolve();
