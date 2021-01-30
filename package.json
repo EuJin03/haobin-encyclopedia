@@ -17,6 +17,9 @@
   },
   "author": "EuJin",
   "license": "ISC",
+  "engines": {
+    "node": "v14.15.1^"
+  },
   "bugs": {
     "url": "https://github.com/EuJin03/haobin-encyclopedia/issues"
   },
