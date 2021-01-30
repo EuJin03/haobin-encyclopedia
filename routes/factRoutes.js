@@ -7,12 +7,13 @@ import {
   updateFact,
   deleteFact,
 } from "../controllers/factController.js";
+import admin from "../middleware/authMiddleware.js";
 
-router.route("/").get(getAllFacts).post(createFact);
+router.route("/").get(getAllFacts).post(admin, createFact);
 router
   .route("/:phraseId")
   .get(getFactByPhraseId)
-  .put(updateFact)
-  .delete(deleteFact);
+  .put(admin, updateFact)
+  .delete(admin, deleteFact);
 
 export default router;
