@@ -4,6 +4,8 @@ import colors from "colors";
 import morgan from "morgan";
 import connectDB from "./config/db.js";
 
+import factRoutes from "./routes/factRoutes.js";
+
 config();
 connectDB();
 const app = express();
@@ -13,6 +15,8 @@ if (process.env.NODE_ENV === "development") {
 }
 
 app.use(express.json());
+
+app.use("/api/facts", factRoutes);
 
 app.get("/", (req, res) => {
   res.send("API is running");
