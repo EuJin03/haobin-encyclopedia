@@ -14,7 +14,7 @@ fetch("https://haobin.herokuapp.com/api/facts")
   .then(json => console.log(json));
 ```
 
-To GET single Hao Bin facts
+To GET single Hao Bin fact
 
 ```javascript
 fetch("https://haobin.herokuapp.com/api/facts/:phraseId")
@@ -22,7 +22,7 @@ fetch("https://haobin.herokuapp.com/api/facts/:phraseId")
   .then(json => console.log(json));
 ```
 
-To create a new facts regarding Hao Bin
+To create a new fact regarding Hao Bin
 
 ```javascript
 fetch("https://haobin.herokuapp.com/api/facts", {
@@ -30,6 +30,9 @@ fetch("https://haobin.herokuapp.com/api/facts", {
   headers: {
     "Content-type": "application/json",
   },
+  // POST only content, author and token field
+  // phraseId will be generated automatically
+  // request token from the owner
   body: JSON.stringify(facts),
 })
   .then(response => response.json())
